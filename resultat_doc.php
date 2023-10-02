@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Validation du document</title>
-        <link rel="stylesheet" href="./styles/style.css">
+        <title>Validation du docUment</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <?php
         // include ('model/mat.php');

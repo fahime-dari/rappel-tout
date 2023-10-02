@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Validation de document</title>
-        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 <body>
-<FORM action="resultat_mat.php" METHOD="POST">
+<FORM action="resultat_doc.php" METHOD="POST">
     <?php 
     session_start();
 
@@ -21,13 +21,15 @@
         $_SESSION['date_doc']=$_POST['date_doc'];
         $_SESSION['date_exp']=$_POST['date_exp'];
         $_SESSION['ref_mat']=$_POST['ref_mat'];
+        
+            echo '<h2>Données confirmées:</h2>';
+            echo 'Référence du document :' .$ref_doc. '</p>';
 
-
-        echo '<h2>Données confirmées:</h2>';
-        echo 'Référence du matériel :' .$ref_mat. '</p>';
-        echo 'Date de création :' .$date_doc. '</p>';
-        echo 'Date expiration :' .$date_exp. '</p>';
-    
+            echo 'Date de création :' .$date_doc. '</p>';
+            echo 'Date expiration :' .$date_exp. '</p>';
+            echo 'Référence du matériel :' .$ref_mat. '</p>';
+        
+        
 
     }
     ?>
