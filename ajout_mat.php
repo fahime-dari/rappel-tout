@@ -14,7 +14,7 @@
             <p>
                 Référence du matériel : <input type="text" name="ref_mat"/>
                 <br>
-                Libellé du matériel : <input type="date" name="lib_mat"/>
+                Libellé du matériel : <input type="text" name="lib_mat"/>
                 <br>
                 <input type="submit" name="VALIDER">
             </p>
