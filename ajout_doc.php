@@ -9,7 +9,6 @@
     <body>
         <center>
             <img src="./styles/logo_blanc.png" alt="logo">
-            // Formulaire d'ajout de documentation 
             <form action="./valid_doc.php" method="POST" >
             <h1>AJOUT DE DOCUMENTATION</h1>
             <p>
@@ -21,7 +20,6 @@
                 <br>
                 Référence du matériel : <input type="text" name="ref_mat"/>
                 <br>
-                // Bouton de validation
                 <input type="submit" name="VALIDER">
             </p>
         </form>    

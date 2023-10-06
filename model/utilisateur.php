@@ -49,7 +49,7 @@ class Utilisateur{
     public function create() 
     
     {
-        include 'connexion.php';
+        include 'controller/connexion.php';
         $sql="INSERT INTO utilisateur (login, mdp) VALUES (:login, :mdp)";
         $stmt=$dbco->prepare($sql);
         $stmt->bindParam('login',$this->login);
@@ -60,7 +60,7 @@ class Utilisateur{
 
     public function retrieve($l)
     {
-        include 'connexion.php';
+        include 'controller/connexion.php';
         $sql="SELECT * FROM  utilisateur where login=:login";
         $stmt=$dbco->prepare($sql);
         $stmt->execute();

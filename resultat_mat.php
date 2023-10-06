@@ -9,10 +9,11 @@
     <?php
         include ('model/mat.php');
         session_start();
+
+        // Créer un nouvel objet 
         $materiel1= new materiel($_SESSION["ref_mat"], $_SESSION["lib_mat"]);
+        // Appeler la fonction "CREATE"  de ma classe Matériel 
         $materiel1->create();
-
-
         $heure=date("H:i:s");           
         echo "Le matériel a bien été crée à ".$heure.".";
 
