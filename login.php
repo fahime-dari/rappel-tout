@@ -7,7 +7,7 @@
     <title>CONNEXION</title>
 </head>
 <body>
-<main>
+<main>  
     <form action="resultat_log.php" method="POST">
         <h1>Page de CONNEXION</h1>
         <div>

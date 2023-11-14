@@ -12,6 +12,14 @@
             <h1>Bienvenue sur "Rappel-Tout" !</h1>    
             <a href="ajout_doc.php" class="btn">Ajout de documentation</a>
             <a href="ajout_mat.php" class="btn" >Ajout de matériel</a>
-        </center>
+        
+
+        <h1>Toutes les documentations</h1>
+        <?php
+            
+            
+        ?>
+
+    </center>
     </body>
 </html>
