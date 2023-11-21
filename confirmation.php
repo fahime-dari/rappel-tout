@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmation du MATERIEL</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <FORM action="resultat.php" METHOD="POST">

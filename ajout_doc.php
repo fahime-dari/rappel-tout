@@ -14,15 +14,32 @@
             <p>
                 Référence du document : <input type="text" name="ref_doc"/>
                 <br>
-                Date de création : <input type="date" name="date_doc"/>
-                <br>
                 Date d'expiration : <input type="date" name="date_exp"/>
                 <br>
-                Référence du matériel : <input type="text" name="ref_mat"/>
+                Référence du matériel :
+                <select id="refMatListBox" name="refMatListBox">
+                <?php
+                    include 'controller/connexion.php';
+                    $sql = "SELECT ref_mat FROM materiel";
+                    $stmt = $dbco->prepare($sql);
+                    $stmt->execute();
+                    $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    // Afficher chaque enregistrement dans la liste déroulante
+                    foreach ($resultats as $row) {
+                        echo "<option value='" . $row['ref_mat'] . "'>" . $row['ref_mat'] . "</option>";
+                    }
+                 ?>
+                </select>
                 <br>
+                Libellé du matériel : <input type="file" name="fichier_pdf"/>
+                <br>
+
                 <input type="submit" name="VALIDER">
             </p>
         </form>    
     </center>
 </body>
 </html>
+
+

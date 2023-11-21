@@ -12,8 +12,7 @@
 
         try 
         {
-          
-        $dbco=new PDO('mysql:host=localhost;dbname=rappel_tout',$username,$psswd);
+            $dbco=new PDO('mysql:localhost;dbname=rappel_tout',$username,$psswd);
             
 
         }
@@ -23,6 +22,8 @@
         }
     
     
+    
+    
     ?>
 </body>
-</html>                 
+</html>

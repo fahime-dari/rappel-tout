@@ -9,24 +9,16 @@
     <body>
         <center>
             <img src="./styles/logo_blanc.png" alt="logo">
-            <h1>Bienvenue sur "Rappel-Tout" !</h1>    
-            <a href="documents.php" class="btn">Documents</a>
-            <a href="ajout_mat.php" class="btn" >Matériels</a>
-        
+            <h1>Bienvenue sur "Rappel-Tout" !</h1>   
             <h1>Toutes les documentations</h1>
+            <a href="ajout_doc.php" class="btn">Ajouter un document</a>
             <?php 
                 include 'controller/connexion.php'; 
                 include 'model/document.php'; 
 
-                
-                
                 $req=new document('','','','');
                 $req->findAll();
 
-             
-
-              
-           
            ?>
     </center>
     </body>

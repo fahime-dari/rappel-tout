@@ -13,12 +13,10 @@
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $ref_doc=$_POST['ref_doc'];
-        $date_doc=$_POST['date_doc'];
         $date_exp=$_POST['date_exp'];
         $ref_mat=$_POST['ref_mat'];
 
         $_SESSION['ref_doc']=$_POST['ref_doc'];
-        $_SESSION['date_doc']=$_POST['date_doc'];
         $_SESSION['date_exp']=$_POST['date_exp'];
         $_SESSION['ref_mat']=$_POST['ref_mat'];
         
@@ -32,6 +30,34 @@
         
 
     }
+    $libelle_doc = $_FILES['fichier_pdf']['name'];
+
+        include_once 'model/document.php';
+        include_once 'model/mat.php';
+
+        $materiel = new Materiel('', '');
+        $document = new Document('', '', '', '');
+
+        $materiel->create_mat();
+
+        if (isset($_FILES['fichier_pdf']) && $_FILES['fichier_pdf']['error'] === UPLOAD_ERR_OK) {
+            // Répertoire de destination pour les fichiers PDF
+            $destination_dir = 'pdf/';
+
+            // Chemin complet pour enregistrer le fichier
+            $pdf_file_path = $destination_dir . $libelle_doc;
+
+            // Déplacez le fichier téléchargé vers le répertoire de sauvegarde
+            if (move_uploaded_file($_FILES['fichier_pdf']['tmp_name'], $pdf_file_path)) {
+                // Enregistrez le nom du fichier dans la base de données
+                $document->create_doc();
+                echo 'enregistrement fait';
+            } else {
+                echo 'Erreur lors du téléchargement du fichier PDF.';
+            }
+        } else {
+            echo 'Aucun fichier PDF n été téléchargé.';
+        }
     ?>
      <input type="submit" value="Confirmer ?" id="confirmer"> 
     </form>
